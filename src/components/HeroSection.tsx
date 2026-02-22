@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
+import delphiaLogo from "@/assets/delphia-logo.png";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen items-center justify-center px-6 flex flex-col">
       <div className="mx-auto max-w-3xl text-center">
-        {/* Logo placeholder — replace src with actual logo asset */}
+        {/* Delphia Logo */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="mb-10">
-
-          
-
-
+          <img 
+            src={delphiaLogo} 
+            alt="Delphia logo" 
+            className="mx-auto w-full max-w-[850px] h-auto"
+          />
         </motion.div>
 
         <motion.h1
