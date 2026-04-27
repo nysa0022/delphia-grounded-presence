@@ -5,17 +5,17 @@
 @layer base {
   :root {
     /* Quiet Power palette */
-    --background: 30 22% 87%; /* Warm Sand #E7DED3 */
+    --background: 33 16% 89%; /* Logo background */
     --foreground: 207 24% 16%; /* Charcoal Navy #1F2A33 */
 
     --card: 30 18% 90%;
     --card-foreground: 207 24% 16%;
 
-    --popover: 30 22% 87%;
+    --popover: 33 16% 89%;
     --popover-foreground: 207 24% 16%;
 
     --primary: 207 24% 16%; /* Charcoal Navy */
-    --primary-foreground: 30 22% 87%; /* Sand on Navy */
+    --primary-foreground: 33 16% 89%;
 
     --secondary: 130 18% 67%; /* Soft Sage #9DB8A0 */
     --secondary-foreground: 207 24% 16%;
@@ -27,7 +27,7 @@
     --accent-foreground: 207 24% 16%;
 
     --destructive: 0 60% 50%;
-    --destructive-foreground: 30 22% 87%;
+    --destructive-foreground: 33 16% 89%;
 
     --border: 30 12% 75%;
     --input: 30 12% 75%;
@@ -36,17 +36,17 @@
     --radius: 0.25rem;
 
     /* Custom tokens */
-    --sand: 30 22% 87%;
+    --sand: 33 16% 89%;
     --sand-light: 33 25% 92%;
     --charcoal: 207 24% 16%;
     --charcoal-soft: 207 18% 28%;
     --sage: 130 18% 67%;
     --sage-muted: 130 12% 78%;
 
-    --sidebar-background: 30 22% 87%;
+    --sidebar-background: 33 16% 89%;
     --sidebar-foreground: 207 24% 16%;
     --sidebar-primary: 207 24% 16%;
-    --sidebar-primary-foreground: 30 22% 87%;
+    --sidebar-primary-foreground: 33 16% 89%;
     --sidebar-accent: 130 18% 67%;
     --sidebar-accent-foreground: 207 24% 16%;
     --sidebar-border: 30 12% 75%;
