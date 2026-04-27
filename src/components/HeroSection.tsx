@@ -3,7 +3,7 @@ import delphiaLogo from "@/assets/delphia-logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen items-center justify-center px-6 flex flex-col">
+    <section className="min-h-screen px-6 flex flex-col items-center justify-start pt-24 md:pt-28">
       <div className="mx-auto max-w-3xl text-center">
         {/* Delphia Logo */}
         <motion.div
