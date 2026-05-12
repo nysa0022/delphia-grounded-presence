@@ -18,19 +18,10 @@ const HeroSection = () => {
           />
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mb-8 text-4xl font-normal leading-tight text-foreground md:text-6xl">stay in control
-
-
-        </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
 
           A discreet upper-arm wrap designed to help prevent your body's physical
