@@ -1,36 +1,44 @@
 import FadeIn from "./FadeIn";
 
+const features = [
+  "Micro steel shot bead channels for grounding pressure",
+  "Sensory-motor bead interaction",
+  "Upper-arm proprioceptive anchor",
+  "Designed to be discreet under clothing",
+  "Adjustable comfortable fit",
+  "Breathable inner lining",
+];
+
 const ProductSection = () => {
   return (
     <section id="product" className="px-6 py-24 md:py-36">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-          {/* Product image placeholder */}
+      <div className="mx-auto max-w-6xl">
+        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
           <FadeIn>
-            <div className="flex aspect-square items-center justify-center rounded-sm bg-sand-light border border-border">
-              <p className="text-sm text-muted-foreground italic">
-                Product render coming soon
-              </p>
+            <div className="relative">
+              <div className="flex aspect-square items-center justify-center rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
+                <p className="text-sm italic text-foreground/50">
+                  Product render coming soon
+                </p>
+              </div>
+              <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-sm border border-secondary/40" />
             </div>
           </FadeIn>
 
-          {/* Features */}
           <FadeIn delay={0.15}>
             <div>
-              <h2 className="mb-8 text-3xl font-normal leading-tight text-foreground md:text-4xl">
-                Designed for public speaking.
+              <p className="mb-4 text-xs uppercase tracking-[0.3em] text-foreground/60">The Product</p>
+              <h2 className="mb-6 text-3xl font-normal leading-tight text-foreground md:text-5xl">
+                Designed for high-pressure moments.
               </h2>
+              <p className="mb-10 text-lg leading-relaxed text-foreground/80">
+                Delphia is built to support the body before performance stress peaks, combining pressure, texture, and upper-arm placement in one discreet wrap.
+              </p>
               <ul className="space-y-4">
-                {[
-                  "Deep pressure stimulation",
-                  "Proprioceptive sensory anchor",
-                  "Discreet under clothing",
-                  "Adjustable comfortable fit",
-                  "Breathable inner lining",
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
-                    <span className="text-lg text-muted-foreground">{feature}</span>
+                {features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <span className="mt-2.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                    <span className="text-base leading-relaxed text-foreground/85 md:text-lg">{feature}</span>
                   </li>
                 ))}
               </ul>
