@@ -6,25 +6,25 @@
   :root {
     /* Quiet Power palette */
     --background: 33 16% 89%; /* Logo background */
-    --foreground: 207 24% 16%; /* Charcoal Navy #1F2A33 */
+    --foreground: 215 45% 12%; /* Deep Navy */
 
     --card: 30 18% 90%;
-    --card-foreground: 207 24% 16%;
+    --card-foreground: 215 45% 12%;
 
     --popover: 33 16% 89%;
-    --popover-foreground: 207 24% 16%;
+    --popover-foreground: 215 45% 12%;
 
-    --primary: 207 24% 16%; /* Charcoal Navy */
+    --primary: 215 45% 12%; /* Deep Navy */
     --primary-foreground: 33 16% 89%;
 
-    --secondary: 130 18% 67%; /* Soft Sage #9DB8A0 */
-    --secondary-foreground: 207 24% 16%;
+    --secondary: 130 18% 67%; /* Soft Sage */
+    --secondary-foreground: 215 45% 12%;
 
     --muted: 30 15% 80%;
-    --muted-foreground: 207 15% 40%;
+    --muted-foreground: 215 35% 22%;
 
-    --accent: 130 18% 67%; /* Soft Sage */
-    --accent-foreground: 207 24% 16%;
+    --accent: 130 18% 67%;
+    --accent-foreground: 215 45% 12%;
 
     --destructive: 0 60% 50%;
     --destructive-foreground: 33 16% 89%;

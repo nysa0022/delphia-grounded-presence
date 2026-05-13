@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+const links = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About Us" },
+  { href: "#product", label: "Product" },
+  { href: "#science", label: "Science" },
+  { href: "#storefront", label: "Storefront" },
+  { href: "#contact", label: "Contact" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,26 +21,16 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="#" className="text-xl tracking-tight text-foreground">
+        <a href="#home" className="text-xl tracking-tight text-foreground">
           Delphia
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            About
-          </a>
-          <a href="#product" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Product
-          </a>
-          <a href="#science" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Science
-          </a>
-          <a
-            href="#waitlist"
-            className="rounded-sm bg-primary px-5 py-2.5 text-sm text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Join Waitlist
-          </a>
+          {links.slice(1).map((l) => (
+            <a key={l.href} href={l.href} className="text-sm text-foreground/70 transition-colors hover:text-foreground">
+              {l.label}
+            </a>
+          ))}
         </div>
 
         <button
@@ -52,12 +51,11 @@ const Navbar = () => {
           className="border-t border-border bg-background px-6 py-8 md:hidden"
         >
           <div className="flex flex-col gap-6">
-            <a href="#about" onClick={() => setIsOpen(false)} className="text-sm text-muted-foreground">About</a>
-            <a href="#product" onClick={() => setIsOpen(false)} className="text-sm text-muted-foreground">Product</a>
-            <a href="#science" onClick={() => setIsOpen(false)} className="text-sm text-muted-foreground">Science</a>
-            <a href="#waitlist" onClick={() => setIsOpen(false)} className="inline-block rounded-sm bg-primary px-5 py-2.5 text-center text-sm text-primary-foreground">
-              Join Waitlist
-            </a>
+            {links.slice(1).map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setIsOpen(false)} className="text-sm text-foreground/80">
+                {l.label}
+              </a>
+            ))}
           </div>
         </motion.div>
       )}
