@@ -40,7 +40,7 @@ const HeroSection = () => {
             Join the Waitlist
           </a>
           <a
-            href="#about"
+            href="#science"
             className="rounded-sm border border-foreground/20 px-8 py-3.5 text-base tracking-wide text-foreground transition-colors hover:border-foreground/40"
           >
             Learn More

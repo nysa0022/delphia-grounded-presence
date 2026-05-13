@@ -23,13 +23,13 @@ const FounderSection = () => {
           <FadeIn delay={0.15}>
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-foreground/60">Founder</p>
-              <h3 className="mt-4 text-4xl font-normal text-foreground md:text-5xl">Nysa</h3>
+              <h3 className="mt-4 text-4xl font-normal text-foreground md:text-5xl">Nysa Nayak</h3>
               <p className="mt-2 text-base text-foreground/70">Founder &amp; CEO of Delphia</p>
 
               <div className="mt-8 h-px w-16 bg-secondary" />
 
               <p className="mt-8 text-lg leading-relaxed text-foreground/85">
-                I started Delphia because I know what it feels like to be fully prepared, but still have your body react like you are not. As a high school debater, I have experienced the physical side of performance pressure: shaky hands, racing heart, shallow breathing, and the feeling that your body is moving faster than your mind. Delphia came from that gap between confidence and control. I wanted to create something discreet, wearable, and body-based for people who need a physical anchor before they step into a high-pressure moment.
+                Hi, I’m Nysa Nayak, and I created Delphia because I’m a high school debater who understood the need for Delphia firsthand. There were so many moments where I felt fully prepared and confident, but still could not reach my full potential because of my nerves. Delphia came from that gap between potential and performance. After working on Delphia for over a year, researching performance anxiety, and consulting with psychiatrists and neurologists, I wanted to create something discreet, wearable, and body-based that helps people feel at their best in the moments when it matters most.
               </p>
 
               <p className="mt-8 text-base text-foreground/70">
