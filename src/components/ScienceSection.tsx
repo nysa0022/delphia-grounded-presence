@@ -101,7 +101,7 @@ const ScienceSection = () => {
 
         <FadeIn delay={0.45}>
           <p className="mt-12 text-xs leading-relaxed text-primary-foreground/50 md:text-sm">
-            Delphia is a wellness product, not a medical device. It is designed to support grounding, physical steadiness, and a greater sense of control before high-pressure moments, not to diagnose, treat, or cure anxiety.
+            Disclaimer: Delphia is a wellness product, not a medical device. It is designed to support grounding, physical steadiness, and a greater sense of control before high-pressure moments, not to diagnose, treat, or cure anxiety.
           </p>
         </FadeIn>
       </div>
