@@ -37,6 +37,32 @@ const ScienceSection = () => {
             <article className="h-full rounded-sm border border-primary-foreground/15 bg-primary-foreground/5 p-8 md:p-10">
               <p className="text-xs uppercase tracking-[0.3em] text-sage">01 — Mechanism</p>
               <h3 className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl">
+                Upper-Arm Sensory Grounding
+              </h3>
+              <div className="mt-6 space-y-5 text-base leading-relaxed text-primary-foreground/80">
+                <p>
+                  The upper arm placement is intentional because the upper arm contains hairy skin, where C-tactile afferents are found. CT afferents are nerve fibers associated with affective touch, meaning the pleasant, soothing, body-aware side of touch. Research describes CT afferents as especially responsive to slow, gentle stroking on hairy skin, with many studies discussing an optimal stroking speed around 3 cm per second.
+                </p>
+                <p>
+                  When the user slowly strokes the bead channels or wrap surface on the upper arm, that motion may support affective-touch pathways linked to calming touch and body awareness. The upper-arm placement and slow stroking motion are designed to work with affective-touch pathways.
+                </p>
+                <p>
+                  The upper arm also supports proprioception, the body's sense of position and movement. When Delphia applies pressure to the upper arm, it gives the brain clearer body-based feedback: <em>this is my arm, this is my body, I am physically here.</em>
+                </p>
+                <p>
+                  Delphia's micro steel shot bead channels create focused deep pressure, which stimulates mechanoreceptors — sensory receptors that respond to touch, pressure, stretch, and movement. Deep pressure stimulation has been studied for its effect on autonomic arousal, including reduced sympathetic arousal and increased parasympathetic arousal in a pressure-vest study.
+                </p>
+                <p>
+                  Together, Delphia uses slow touch, pressure, texture, and body-position feedback to create a steady grounding signal before performance stress peaks.
+                </p>
+              </div>
+            </article>
+          </FadeIn>
+
+          <FadeIn delay={0.35}>
+            <article className="h-full rounded-sm border border-primary-foreground/15 bg-primary-foreground/5 p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.3em] text-sage">02 — Mechanism</p>
+              <h3 className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl">
                 Sensory-Motor Feedback
               </h3>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-primary-foreground/80">
@@ -59,31 +85,6 @@ const ScienceSection = () => {
             </article>
           </FadeIn>
 
-          <FadeIn delay={0.35}>
-            <article className="h-full rounded-sm border border-primary-foreground/15 bg-primary-foreground/5 p-8 md:p-10">
-              <p className="text-xs uppercase tracking-[0.3em] text-sage">02 — Mechanism</p>
-              <h3 className="mt-4 text-2xl font-normal text-primary-foreground md:text-3xl">
-                Upper-Arm Sensory Grounding
-              </h3>
-              <div className="mt-6 space-y-5 text-base leading-relaxed text-primary-foreground/80">
-                <p>
-                  The upper arm placement is intentional because the upper arm contains hairy skin, where C-tactile afferents are found. CT afferents are nerve fibers associated with affective touch, meaning the pleasant, soothing, body-aware side of touch. Research describes CT afferents as especially responsive to slow, gentle stroking on hairy skin, with many studies discussing an optimal stroking speed around 3 cm per second.
-                </p>
-                <p>
-                  When the user slowly strokes the bead channels or wrap surface on the upper arm, that motion may support affective-touch pathways linked to calming touch and body awareness. The upper-arm placement and slow stroking motion are designed to work with affective-touch pathways.
-                </p>
-                <p>
-                  The upper arm also supports proprioception, the body's sense of position and movement. When Delphia applies pressure to the upper arm, it gives the brain clearer body-based feedback: <em>this is my arm, this is my body, I am physically here.</em>
-                </p>
-                <p>
-                  Delphia's micro steel shot bead channels create focused deep pressure, which stimulates mechanoreceptors — sensory receptors that respond to touch, pressure, stretch, and movement. Deep pressure stimulation has been studied for its effect on autonomic arousal, including reduced sympathetic arousal and increased parasympathetic arousal in a pressure-vest study.
-                </p>
-                <p>
-                  Together, Delphia uses slow touch, pressure, texture, and body-position feedback to create a steady grounding signal before performance stress peaks.
-                </p>
-              </div>
-            </article>
-          </FadeIn>
         </div>
 
         <FadeIn delay={0.4}>

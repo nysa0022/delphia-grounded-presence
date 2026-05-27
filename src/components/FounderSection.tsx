@@ -1,4 +1,6 @@
 import FadeIn from "./FadeIn";
+import founderPhoto from "@/assets/founder-nysa.jpg";
+
 
 const FounderSection = () => {
   return (
@@ -13,9 +15,14 @@ const FounderSection = () => {
         <div className="grid items-start gap-12 md:grid-cols-2 md:gap-20">
           <FadeIn>
             <div className="relative">
-              <div className="flex aspect-[4/5] items-center justify-center rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
-                <p className="text-sm italic text-foreground/50">Founder portrait</p>
+              <div className="aspect-[4/5] overflow-hidden rounded-sm border border-foreground/10 bg-sand-light shadow-sm">
+                <img
+                  src={founderPhoto}
+                  alt="Nysa Nayak, Founder of Delphia"
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
+
               <div className="absolute -bottom-3 -left-3 -z-10 h-full w-full rounded-sm border border-secondary/40" />
             </div>
           </FadeIn>
