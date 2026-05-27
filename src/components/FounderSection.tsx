@@ -1,4 +1,6 @@
 import FadeIn from "./FadeIn";
+import founderPhoto from "@/assets/founder-nysa.jpg";
+
 
 const FounderSection = () => {
   return (
