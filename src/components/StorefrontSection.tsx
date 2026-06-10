@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FadeIn from "./FadeIn";
+import storefrontRender from "@/assets/storefront-render.png";
 
 const StorefrontSection = () => {
   const [email, setEmail] = useState("");
