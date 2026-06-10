@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FadeIn from "./FadeIn";
+import storefrontRender from "@/assets/storefront-render.png";
 
 const StorefrontSection = () => {
   const [email, setEmail] = useState("");
@@ -59,8 +60,12 @@ const StorefrontSection = () => {
 
           <FadeIn delay={0.15}>
             <div className="relative">
-              <div className="flex aspect-[4/5] items-center justify-center rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
-                <p className="text-sm italic text-foreground/50">Product render coming soon</p>
+              <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
+                <img
+                  src={storefrontRender}
+                  alt="Delphia upper-arm wrap product render"
+                  className="h-full w-full object-contain p-6"
+                />
               </div>
               <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-sm border border-secondary/40" />
             </div>

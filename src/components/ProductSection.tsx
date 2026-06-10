@@ -37,6 +37,10 @@ const ProductSection = () => {
               <p className="mb-10 text-lg leading-relaxed text-foreground/80">
                 Delphia is built to support the body before performance stress peaks, combining pressure, texture, and upper-arm placement in one discreet wrap.
               </p>
+              <p className="mb-10 text-base md:text-lg">
+                <span className="text-foreground/60">Price:</span>{" "}
+                <span className="text-foreground">$35</span>
+              </p>
               <ul className="space-y-4">
                 {features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-4">
