@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn";
+import productRender from "@/assets/product-render.png";
 
 const features = [
   "Micro steel shot bead channels for grounding pressure",
@@ -6,7 +7,7 @@ const features = [
   "Upper-arm proprioceptive anchor",
   "Designed to be discreet under clothing",
   "Adjustable comfortable fit",
-  "Breathable inner lining",
+  "Stretchy nylon-laminated neoprene breathable fabric",
 ];
 
 const ProductSection = () => {
