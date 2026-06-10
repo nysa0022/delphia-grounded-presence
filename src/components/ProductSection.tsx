@@ -17,10 +17,12 @@ const ProductSection = () => {
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
           <FadeIn>
             <div className="relative">
-              <div className="flex aspect-square items-center justify-center rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
-                <p className="text-sm italic text-foreground/50">
-                  Product render coming soon
-                </p>
+              <div className="flex aspect-square items-center justify-center overflow-hidden rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
+                <img
+                  src={productRender}
+                  alt="Delphia upper-arm wrap product render"
+                  className="h-full w-full object-contain p-6"
+                />
               </div>
               <div className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-sm border border-secondary/40" />
             </div>
