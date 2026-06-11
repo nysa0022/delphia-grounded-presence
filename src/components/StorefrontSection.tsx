@@ -2,13 +2,34 @@ import { useState } from "react";
 import FadeIn from "./FadeIn";
 import storefrontRender from "@/assets/storefront-render.png";
 
+const WAITLIST_URL =
+  "https://script.google.com/macros/s/AKfycbzz4jOnLpVc6ERbJv4D3zRP5y0WGjTCC8qNa79NP146N51IUzukn-TjwR-arGroJYV_Kg/exec";
+
 const StorefrontSection = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    if (!email.trim() || submitting) return;
+    setSubmitting(true);
+    setErrorMessage("");
+    try {
+      await fetch(WAITLIST_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      setEmail("");
+      setSubmitted(true);
+    } catch (err) {
+      setErrorMessage("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
