@@ -49,7 +49,7 @@ const StorefrontSection = () => {
               {submitted ? (
                 <div className="rounded-sm border border-secondary/50 bg-sand-light px-6 py-5">
                   <p className="text-base text-foreground">
-                    Thank you. You'll be the first to hear from us.
+                    You're on the waitlist.
                   </p>
                 </div>
               ) : (
@@ -65,15 +65,20 @@ const StorefrontSection = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
                       required
-                      className="flex-1 rounded-sm border border-foreground/20 bg-transparent px-5 py-3.5 text-base text-foreground placeholder:text-foreground/40 focus:border-secondary focus:outline-none"
+                      disabled={submitting}
+                      className="flex-1 rounded-sm border border-foreground/20 bg-transparent px-5 py-3.5 text-base text-foreground placeholder:text-foreground/40 focus:border-secondary focus:outline-none disabled:opacity-60"
                     />
                     <button
                       type="submit"
-                      className="rounded-sm bg-primary px-7 py-3.5 text-base tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
+                      disabled={submitting}
+                      className="rounded-sm bg-primary px-7 py-3.5 text-base tracking-wide text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      Join waitlist
+                      {submitting ? "Joining..." : "Join waitlist"}
                     </button>
                   </div>
+                  {errorMessage && (
+                    <p className="text-sm text-foreground/70">{errorMessage}</p>
+                  )}
                 </form>
               )}
             </div>
