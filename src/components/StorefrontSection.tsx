@@ -2,13 +2,34 @@ import { useState } from "react";
 import FadeIn from "./FadeIn";
 import storefrontRender from "@/assets/storefront-render.png";
 
+const WAITLIST_URL =
+  "https://script.google.com/macros/s/AKfycbzz4jOnLpVc6ERbJv4D3zRP5y0WGjTCC8qNa79NP146N51IUzukn-TjwR-arGroJYV_Kg/exec";
+
 const StorefrontSection = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    if (!email.trim() || submitting) return;
+    setSubmitting(true);
+    setErrorMessage("");
+    try {
+      await fetch(WAITLIST_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      setEmail("");
+      setSubmitted(true);
+    } catch (err) {
+      setErrorMessage("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -28,7 +49,7 @@ const StorefrontSection = () => {
               {submitted ? (
                 <div className="rounded-sm border border-secondary/50 bg-sand-light px-6 py-5">
                   <p className="text-base text-foreground">
-                    Thank you. You'll be the first to hear from us.
+                    You're on the waitlist.
                   </p>
                 </div>
               ) : (
@@ -44,15 +65,20 @@ const StorefrontSection = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your@email.com"
                       required
-                      className="flex-1 rounded-sm border border-foreground/20 bg-transparent px-5 py-3.5 text-base text-foreground placeholder:text-foreground/40 focus:border-secondary focus:outline-none"
+                      disabled={submitting}
+                      className="flex-1 rounded-sm border border-foreground/20 bg-transparent px-5 py-3.5 text-base text-foreground placeholder:text-foreground/40 focus:border-secondary focus:outline-none disabled:opacity-60"
                     />
                     <button
                       type="submit"
-                      className="rounded-sm bg-primary px-7 py-3.5 text-base tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
+                      disabled={submitting}
+                      className="rounded-sm bg-primary px-7 py-3.5 text-base tracking-wide text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      Join waitlist
+                      {submitting ? "Joining..." : "Join waitlist"}
                     </button>
                   </div>
+                  {errorMessage && (
+                    <p className="text-sm text-foreground/70">{errorMessage}</p>
+                  )}
                 </form>
               )}
             </div>
