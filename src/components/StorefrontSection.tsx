@@ -60,6 +60,7 @@ const StorefrontSection = () => {
 
           <FadeIn delay={0.15}>
             <div className="relative">
+              {/* storefront render */}
               <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-sm bg-sand-light border border-foreground/10 shadow-sm">
                 <img
                   src={storefrontRender}

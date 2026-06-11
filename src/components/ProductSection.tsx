@@ -41,6 +41,7 @@ const ProductSection = () => {
                 <span className="text-foreground/60">Price:</span>{" "}
                 <span className="text-foreground">$35</span>
               </p>
+              {/* price line */}
               <ul className="space-y-4">
                 {features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-4">
